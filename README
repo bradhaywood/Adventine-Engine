@@ -1,0 +1,25 @@
+Adventine-Engine
+
+After reading a recent blog post by Ovid on Scott Adams' games it brought back some memories. I have always 
+enjoyed those kind of games, allowing the imagination to take control instead of a monster graphics card. Anyway, the problem with the Scott Adams' game was Ovid was unsure if he was allowed to include the database file for legal reasons and instead gave people a way to download them (legally, of course). 
+But I wanted a way for people to write their own worlds and share them, in Perl. For free.
+
+Worlds
+------
+
+Worlds are simple Perl modules with the namespace Adventine::World::YourWorldName. An example is included with Adventine::Engine called ExampleWorld.
+
+Sprites
+-------
+
+Simple non-npc objects you can interract with, like a box, sign, chair, table, tree, etc..
+
+NPCs
+----
+
+Non-Playable Characters are currently in development. Will be people you can talk to and gain quests from.
+
+
+
+
+NOTE: Adventine is under development and doesn't do a whole let yet. It's more a proof of concept at this stage.
