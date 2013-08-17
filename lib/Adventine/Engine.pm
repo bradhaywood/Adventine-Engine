@@ -39,7 +39,7 @@ sub run {
 sub _prompt {
     my $self = shift;
     my @commands = qw/
-        look
+        look read
     /;
 
     my $p = $self->player->name . "> ";
@@ -47,11 +47,16 @@ sub _prompt {
     while(my $line = <STDIN>) {
         chomp $line;
         my ($cmd, @args) = split ' ', $line;
-        if (@args) {
-            $self->player->$cmd(join(' ', @args));
+        if (grep { $_ eq $cmd } @commands) {
+            if (@args) {
+                $self->player->$cmd(join(' ', @args));
+            }
+            else {
+                $self->player->$cmd;
+            }
         }
         else {
-            $self->player->$cmd;
+            say $self->player->name . ": Uh.. I'm not sure how to do that.";
         }
 
         print $p;
