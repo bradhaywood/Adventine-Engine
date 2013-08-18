@@ -30,7 +30,10 @@ sub data {
                         read   => $self->sign($self->_first_sign()),
                     ),
                 },
-                exits => [],
+            },
+            '1,0' => {
+                title => "First North Room",
+                can_see => {},
             },
         },
     };
