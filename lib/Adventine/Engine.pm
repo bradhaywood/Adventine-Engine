@@ -39,7 +39,8 @@ sub run {
 sub _prompt {
     my $self = shift;
     my @commands = qw/
-        look read north south
+        north east south west
+        look read
     /;
 
     my $p = $self->player->name . "> ";

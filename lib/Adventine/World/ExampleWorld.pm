@@ -35,6 +35,23 @@ sub data {
                 title => "First North Room",
                 can_see => {},
             },
+            '0,1' => {
+                title => "First East Room",
+                can_see => {
+                    'a window' => $self->sprite(
+                        title  => 'a window',
+                        look   => 'You look through the window and see a meadow outside.',
+                        grab   => "You can't really grab a window, can you?",
+                        attack => "The window doesn't smash. It appears you lack the upper-body strength.",
+                        talk   => "You have a very one-sided conversation with a window",
+                        read   => "There's no words on the window to read",
+                    ),
+                },
+            },
+            '-1,1' => {
+                title => "South-East Room",
+                can_see => {},
+            }
         },
     };
 }

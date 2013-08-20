@@ -116,7 +116,6 @@ sub read {
 
 sub north {
     my ($self) = @_;
-    my ($room, @can_see) = $self->_get_room_info();
     $self->lat($self->lat+1);
     $self->look;
 }
@@ -124,6 +123,18 @@ sub north {
 sub south {
     my ($self) = @_;
     $self->lat($self->lat-1);
+    $self->look;
+}
+
+sub east {
+    my ($self) = @_;
+    $self->lon($self->lon+1);
+    $self->look;
+}
+
+sub west {
+    my ($self) = @_;
+    $self->lon($self->lon-1);
     $self->look;
 }
 
